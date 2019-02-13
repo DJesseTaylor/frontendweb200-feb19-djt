@@ -1,2 +1,2 @@
 <app-todo-entry (itemAdded)="addNewItem($event)"></app-todo-entry>
-<app-todo-list [list]="stuffToDo"></app-todo-list>
+<app-todo-list [list]="stuffToDo | async"></app-todo-list>

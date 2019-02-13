@@ -13,6 +13,7 @@ import { TodoListComponent } from './components/todo/todo-list/todo-list.compone
 import { TodoComponent } from './components/todo/todo.component';
 import { TodosReduxModule } from './features/todos-redux/todos-redux.module';
 import { reducers } from './reducers';
+import { EffectsModule } from '@ngrx/effects';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { reducers } from './reducers';
     AppRoutingModule,
     TodosReduxModule,
     StoreModule.forRoot(reducers),
-    StoreDevtoolsModule.instrument()
+    StoreDevtoolsModule.instrument(),
+    EffectsModule.forRoot([])
   ],
   providers: [TodoDateService],
   bootstrap: [AppComponent]

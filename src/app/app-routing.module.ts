@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { DashboardComponent } from './components/dashboard/dashboard.component';
 import { TodoComponent } from './components/todo/todo.component';
 import { TodosReduxComponent } from './features/todos-redux/todos-redux.component';
+import { BooksComponent } from './features/books/books.component';
 
 const routes: Routes = [
   {
@@ -16,6 +17,10 @@ const routes: Routes = [
   {
     path: 'todo-redux',
     component: TodosReduxComponent
+  },
+  {
+    path: 'books',
+    component: BooksComponent
   },
   {
     path: '**',

@@ -1,0 +1,11 @@
+<header>
+  <h5>Todo Redux Style</h5>
+</header>
+<section class="row">
+  <div class="col">
+    <app-book-entry></app-book-entry>
+  </div>
+  <div class="col">
+    <app-book-list [list]="bookList$ |async"></app-book-list>
+  </div>
+</section>

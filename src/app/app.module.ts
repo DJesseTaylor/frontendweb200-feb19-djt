@@ -1,4 +1,5 @@
 import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
 import { BrowserModule } from '@angular/platform-browser';
 import { StoreModule } from '@ngrx/store';
 import { StoreDevtoolsModule } from '@ngrx/store-devtools';
@@ -14,6 +15,7 @@ import { TodoComponent } from './components/todo/todo.component';
 import { TodosReduxModule } from './features/todos-redux/todos-redux.module';
 import { reducers } from './reducers';
 import { EffectsModule } from '@ngrx/effects';
+import { BooksModule } from './features/books/books.module';
 
 
 @NgModule({
@@ -30,9 +32,11 @@ import { EffectsModule } from '@ngrx/effects';
     BrowserModule,
     AppRoutingModule,
     TodosReduxModule,
+    BooksModule,
     StoreModule.forRoot(reducers),
     StoreDevtoolsModule.instrument(),
-    EffectsModule.forRoot([])
+    EffectsModule.forRoot([]),
+    FormsModule
   ],
   providers: [TodoDateService],
   bootstrap: [AppComponent]
